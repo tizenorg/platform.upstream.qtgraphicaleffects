@@ -53,10 +53,10 @@ This package contains the Qt Graphical Effect library
 #### Build section
 
 %prep
-%setup -q -n %{name}-%{version}/qtgraphicaleffects
-cp %{SOURCE1001} .
+%setup -q -n %{name}-%{version}
 
 %build
+cp %{SOURCE1001} .
 export QTDIR=/usr/share/qt5
 touch .git # To make sure syncqt is used
 
