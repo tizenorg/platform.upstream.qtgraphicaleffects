@@ -30,8 +30,9 @@ Release:    0
 Group:      Base/Libraries
 License:    LGPL-2.1+ or GPL-3.0
 URL:        http://qt.digia.com
-Source0:    %{name}-%{version}.tar.bz2
 BuildArch:  noarch
+Source0:    %{name}-%{version}.tar.bz2
+Source1001: %{name}.manifest
 BuildRequires:  qt5-qtcore-devel
 BuildRequires:  qt5-qtgui-devel
 BuildRequires:  qt5-qtopengl-devel
@@ -53,6 +54,7 @@ This package contains the Qt Graphical Effect library
 
 %prep
 %setup -q -n %{name}-%{version}/qtgraphicaleffects
+cp %{SOURCE1001} .
 
 %build
 export QTDIR=/usr/share/qt5
@@ -76,5 +78,6 @@ rm -rf %{buildroot}
 
 %files
 %defattr(-,root,root,-)
+%manifest %{name}.manifest
 %{_libdir}/qt5/qml/QtGraphicalEffects/*
 
