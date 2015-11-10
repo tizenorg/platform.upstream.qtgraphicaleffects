@@ -25,12 +25,11 @@
 
 Name:       qt5-qtgraphicaleffects
 Summary:    Qt Graphical Effects
-Version:    5.4.1
+Version:    5.5.90+alpha1
 Release:    0
 Group:      Base/Libraries
 License:    LGPL-2.1+ or GPL-3.0
 URL:        http://qt.digia.com
-BuildArch:  noarch
 Source0:    %{name}-%{version}.tar.bz2
 Source1001: %{name}.manifest
 BuildRequires:  qt5-qtcore-devel
